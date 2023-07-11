@@ -1,0 +1,36 @@
+// 컴포넌트란?
+// 컴포넌트는 "소형" 레이아웃 같은 것이다. 사이트 내에서 재사용가능한 작은 부분들을 여기에 정의한다.
+//  buttons, forms, profile pictures와 같은 것이 여기에 해당된다. 
+section.center {
+
+    .link-site {
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 30px;
+        display: inline-block;
+
+
+        &:hover {
+            color: rgb(255, 205, 0);
+
+            &::after {
+                margin-left: 24px;
+                background-image: url(../images/ic_16_more_yellow.svg);
+            }
+        }
+
+        &::after {
+            margin-left: 16px;
+            width: 40px;
+            height: 16px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(../images/ic_16_more.svg);
+            display: inline-block;
+            content: '';
+            transition: margin-left 0.3s;
+        }
+        
+    }
+}

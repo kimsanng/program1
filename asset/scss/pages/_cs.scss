@@ -1,0 +1,155 @@
+.sc-suppinfor {
+    margin-top: 100px;
+
+    .desc {
+        margin-top: 40px;
+    }
+
+    .link-site {
+        margin-top: 30px;
+        
+    }
+}
+.sc-custalk {
+    margin: 200px 0;
+
+    .txt-notice {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .s-title {
+        display: table-cell;
+        vertical-align: top;
+        padding: 0 150px;
+    }
+    .desc {
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    .talk-box {
+        margin-top: 30px;
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        text-align: left;
+
+        .left {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .right {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        a {
+            &+a {
+                margin-top: 10px;
+            }
+
+            box-sizing: border-box;
+            margin: 0px;
+            color: rgb(0, 0, 0);
+            border: 1px solid rgb(128, 128, 128);
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 30px;
+            display: block;
+            width: 330px;
+            padding: 9px 0px 9px 20px;
+        }
+    }
+    .ig-notice {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+
+        .view-box {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 100px 6px 0;
+
+            .ig-box {
+                width: 321px;
+                margin: 0px auto;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .text-box {
+                margin-top: 50px;
+
+                .s-title {
+                    padding: 0;
+                    display: block;
+                }
+                .content {
+                    margin-top: 24px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 30px;
+                    color: rgb(102, 102, 102);
+                }
+            }
+        }
+    }
+
+    
+}
+// common
+section {
+    &.center {
+        text-align: center;
+    }
+
+    .row {
+        display: table-row;
+    }
+    .s-title {
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 46px;
+    }
+    .desc {
+        font-size: 22px;
+        font-weight: 800;
+        line-height: 34px;
+    }
+}
+
+// @keyframes txtrise {
+//     from {
+//         margin-top: 0;
+//         opacity: 0;
+//     }
+
+//     to {
+//         opacity: 1;
+//         margin-top: -40px;
+//     }
+// }
+// @keyframes leftblindin {
+//     from {
+//         left: -50%;
+//     }
+
+//     to {
+//         left: -282px;
+//     }
+// }
+// @keyframes rightblindin {
+//     from {
+//         right: -50%;
+//     }
+
+//     to {
+//         right: -282px;
+//     }
+// }

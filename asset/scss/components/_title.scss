@@ -1,0 +1,96 @@
+.sc-informain {
+    overflow: hidden;
+
+    .visual-box {
+        position: relative;
+        margin-top: 100px;
+    }
+    .left-blind {
+        position: absolute;
+        background: rgb(255, 255, 255);
+        top: -100px;
+        left: -282px;
+        width: 50%;
+        bottom: 0;
+    }
+    .right-blind {
+        position: absolute;
+        background: rgb(255, 255, 255);
+        top: -100px;
+        right: -282px;
+        width: 50%;
+        bottom: 0;
+    }
+    .video-box {
+        min-height: 100vh;
+        height: 100vh;
+        overflow: hidden;
+        margin-top: -100px;
+
+        video {
+            height: 100%;
+        }
+    }
+    //서브 비디오메인
+    .title-wrap{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        margin-top: -76px;
+        .img-box{
+            img{
+                width: 129px;
+                object-fit: cover;
+            }
+        }
+    }
+    .txt-box2{
+        opacity: 1;
+        .cata {
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 34px;
+            color: rgb(255, 255, 255);
+            display: block;  
+        }
+        .m-title {
+            padding-top: 12px;
+            font-size: 100px;
+            font-weight: 700;
+            line-height: 110px;
+            color: rgb(255, 205, 0);
+            white-space: pre-wrap;
+        }
+    }
+    .txt-box {
+        opacity: 1;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%,-50%);
+        // text-align: center;
+        // margin-top: -40px;
+        // opacity: 0;
+        // animation-duration: 1s;
+        // animation-name: txtrise;
+        // animation-delay: 3s;
+
+        .cata {
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 34px;
+            color: rgb(255, 255, 255);
+            display: block;  
+        }
+        .m-title {
+            padding-top: 12px;
+            font-size: 100px;
+            font-weight: 700;
+            line-height: 110px;
+            color: rgb(255, 205, 0);
+            white-space: pre-wrap;
+        }
+    }
+}

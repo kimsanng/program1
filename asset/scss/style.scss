@@ -1,0 +1,22 @@
+// abstracts
+@import './abstracts/variables';
+@import './abstracts/mixins';
+
+//base
+@import './base/reset';
+@import './base/preset';
+@import './base/typography';
+
+//layout
+@import './layout/header';
+@import './layout/footer';
+
+//components
+@import './components/buttons';
+
+//pages
+@import './pages/home';
+@import './pages/service';
+@import './pages/cs';
+@import './pages/mobil';
+@import './pages/move';

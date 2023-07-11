@@ -1,0 +1,151 @@
+
+// 바디여기서 세팅하세요
+body {
+    min-width: 1200px;
+    font-family: KakaoBig, "Noto Sans KR", -apple-system, BlinkMacSystemFont, nanumbarungothic, nanumgothic, "malgun gothic", dotum, sans-serif;
+    line-height: 1;
+    font-size: 16px;
+    color: inherit;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+}
+.common-inner {
+    width: 100%; height: 100%;
+    max-width: 1920px; min-width: 1200px;
+    padding: 0px 5%;
+    margin: 0px auto;
+}
+
+.loading-sub {
+    position: fixed;
+    width: 100vw; height: 100vh;
+    background-color: rgb(32, 34, 55);
+    opacity: 1;
+    z-index: 100;
+    pointer-events: none;
+}
+.reverse {
+    flex-direction: row-reverse;
+}
+.cover {
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 100%; height: 100%;
+    background-color: #fff;
+}
+
+.sc-informain {
+    overflow: hidden;
+
+    .visual-box {
+        position: relative;
+        margin-top: 100px;
+    }
+    .left-blind {
+        position: absolute;
+        background: rgb(255, 255, 255);
+        top: -100px;
+        left: -282px;
+        width: 50%;
+        bottom: 0;
+    }
+    .right-blind {
+        position: absolute;
+        background: rgb(255, 255, 255);
+        top: -100px;
+        right: -282px;
+        width: 50%;
+        bottom: 0;
+    }
+    .video-box {
+        min-height: 100vh;
+        height: 100vh;
+        overflow: hidden;
+        margin-top: -100px;
+
+        video {
+            height: 100%;
+        }
+    }
+    //서브 비디오메인
+    .title-wrap{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        margin-top: -51px;
+        .img-box{
+            img{
+                width: 129px;
+                object-fit: cover;
+            }
+        }
+    }
+    .txt-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        margin-top: 60px;
+    }
+    .cata {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 34px;
+        color: rgb(255, 255, 255);
+        display: block;  
+    }
+    .m-title {
+        padding-top: 12px;
+        font-size: 100px;
+        font-weight: 700;
+        line-height: 110px;
+        color: rgb(255, 205, 0);
+        white-space: pre-wrap;
+    }
+}
+
+.btn-more {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 30px 0px 0px;
+    border: 0px none;
+    outline: none;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    &::after {
+        content: '';
+        display: inline-block;
+        margin-top: -0.1em; margin-left: 14px;
+        width: 40px; height: 16px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(../images/ic_more_white.svg), none;
+        vertical-align: middle;
+        transition: margin-left 0.2s ease-out 0s;
+    }
+    &:hover {
+        color: rgb(255, 205, 0);
+        &::after {
+            margin-left: 24px;
+            background-image: url(../images/ic_more_active.svg), none;
+        }
+    }
+}

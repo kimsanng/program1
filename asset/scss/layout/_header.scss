@@ -1,0 +1,222 @@
+
+header {
+    width: 100%;
+    height: 101px;
+    background-color: #fff;
+    z-index: 11;
+    &.header-main {
+        position: fixed;
+        overflow: hidden;
+        transition: height 0.4s, background-color .4s; 
+        .covid {
+            margin-top: 16px;
+        }
+        .gnb-menu .subMenu-list {
+            transition: .4s;
+        }
+        &.over {
+            height: 394px;
+            z-index: 1001;
+        }
+    }
+    &.header-area {
+        position: absolute;
+        .header-bg {
+            transition: height 0.5s; 
+            height: 0;
+            width: 100%;
+            background-color: #fff;
+        }
+        .gnb-menu .subMenu-list {
+            transition: .1s;
+            transition-delay: .1s;
+            pointer-events: none;
+        }
+        
+        &:hover {
+            .gnb-menu {
+                color: #000;
+            }
+        }
+        
+        &.over {
+        
+            .header-bg {
+                height: 294px;
+            }
+            .gnb-menu .subMenu-list {pointer-events: all;}
+        }
+    }
+    .common-inner {
+        display: flex;
+        position: relative;
+        z-index: 1;
+    }
+    .logo {
+        width: 163px; 
+        height: 27px;
+        margin-right: 4vw;
+        background-image: url(../images/logo.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: .2s ease;
+        margin-top: 33px;
+
+        a {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .gnb-menu {
+        flex: 1;
+        font-size: 0;
+        color: #666;
+        text-align: center;
+        transition: color .2s;
+        .gnb-item {
+            display: inline-block;
+            position: relative;
+            width: 180px;
+            font-size: 16px;
+            line-height: 96px;
+            text-align: left;
+            vertical-align: top;
+            height: 100%;
+        }
+        .covid {
+            float: right;
+            width: auto;
+            font-size: 16px;
+            line-height: 30px;
+            text-align: left;
+            vertical-align: top;
+            margin-top: 33px;
+        }
+        .subMenu-list {
+            position: absolute;
+            left: 0;
+            padding-top: 35px;
+            width: 100%;
+            height: 215px;
+            opacity: 0;
+
+            .subMenu-item {
+                font-size: 16px;
+                line-height: 30px;
+                white-space: nowrap;
+                transition: color .1s ease;
+
+                &+.subMenu-item {
+                    margin-top: 16px;
+                }
+            }
+        }
+        a {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 100px; 
+        left: 0px;
+        width: 100%;
+        border-color: rgb(229, 229, 229);
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        transition: border-color .2s ease, opacity .2s ease;
+        opacity: 1;
+    }
+    &.header-main:hover {
+        background-color: #fff;
+        .logo {
+            filter: none;
+        }
+        .gnb-menu {
+            color: #000;
+        }
+    }
+
+    &.over {
+
+        .gnb-menu {
+
+            .subMenu-list {
+                opacity: 1;
+            }
+        }
+    }
+    &.transform {
+        background-color: transparent;
+        .logo {
+            filter: invert(100%);
+        }
+        .gnb-menu {
+            color: #fff;
+        }
+        &::after {
+            opacity: 0;
+        }
+    }
+}
+.header-area {
+    &.fixed {
+        position: fixed;
+        height: 55px;
+        // transition: 0s;
+
+        .logo {
+            transform: scale(0.64);
+            margin-top: 12px;
+            margin-right: 6vw;
+            margin-left: -2vw;
+        }
+        .covid {
+            margin-top: 12px;
+        }
+        &::after {
+            top: 54px;
+        }
+
+        .gnb-menu {
+    
+            .gnb-item {
+                line-height: 54px;
+                font-size: 14px;
+            }
+            .covid {
+                margin-top: 0;
+                font-size: 14px;
+                line-height: 54px;
+            }
+
+            .subMenu-list {
+                height: 196px;
+                transition: .3s;
+
+                .subMenu-item {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+        }
+        &.over {
+            .header-bg {
+                height: 196px;
+            }
+            .gnb-menu {
+
+                .subMenu-list {
+                    transition-delay: .15s;
+                }
+            }
+        }
+
+    }
+
+}
+

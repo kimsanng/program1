@@ -1,0 +1,32 @@
+section {
+    .link-site {
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 30px;
+        display: inline-block;
+
+
+        &:hover {
+            color: rgb(255, 205, 0);
+
+            &::after {
+                margin-left: 24px;
+                background-image: url(../images/ic_16_more_yellow.svg);
+            }
+        }
+
+        &::after {
+            margin-left: 16px;
+            width: 40px;
+            height: 16px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(../images/ic_16_more.svg);
+            display: inline-block;
+            content: '';
+            transition: margin-left 0.3s;
+        }
+        
+    }
+}
